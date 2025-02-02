@@ -1,5 +1,5 @@
 const FAQ = require('../models/Faq');
-const translate = require('@vitalets/google-translate-api').default;;
+const translate = require('@vitalets/google-translate-api').default;
 
 const redis = require('../config/redis');
 
