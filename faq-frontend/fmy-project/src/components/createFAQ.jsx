@@ -15,7 +15,7 @@ const CreateFAQ = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:5000/api/faqs/create-faq', faq)
+    axios.post('https://bharatfd-backend-u15i.onrender.com/api/faqs/create-faq', faq)
       .then(() => {
         alert('FAQ created successfully');
         history('/');
