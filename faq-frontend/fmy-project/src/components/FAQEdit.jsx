@@ -8,7 +8,7 @@ const EditFAQ = () => {
   const [faq, setFaq] = useState({ question: '', answer: '' });
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/faqs/edit-faq/${id}`)
+    axios.get(`https://bharatfd-backend-u15i.onrender.com/api/faqs/edit-faq/${id}`)
       .then(res => setFaq(res.data))
       .catch(err => console.error('Error fetching FAQ:', err));
   }, [id]);
@@ -20,7 +20,7 @@ const EditFAQ = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.put(`http://localhost:5000/api/faqs/edit-faq/${id}`, faq)
+    axios.put(`https://bharatfd-backend-u15i.onrender.com/api/faqs/edit-faq/${id}`, faq)
       .then(() => {
         alert('FAQ updated successfully');
         history('/');
